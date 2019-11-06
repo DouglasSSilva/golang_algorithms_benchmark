@@ -15,7 +15,7 @@ var _ = Describe("Bubblesort", func() {
 	var size int
 	Context("Benchmarking bubblesort efficacy", func() {
 		size = utils.RandomInt(50000, 100000)
-		Measure("It should be fast", func(b Benchmarker) {
+		Measure("It should be less than 10 seconds and rightly sort the array", func(b Benchmarker) {
 			arr = utils.RandomArrayCreator(size, 1, 1000)
 			arrLen := len(arr)
 
